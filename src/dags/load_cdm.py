@@ -55,6 +55,7 @@ def push_data_cdm(selected_date, **kargs):
     #         cnt_accounts_make_transactions)
     # VALUES (src.date_update, src.currency_from, src.amount_total, src.cnt_transactions, src.avg_transactions_per_account, src.cnt_accounts_make_transactions);
     # """
+    print(query_paste_to_vertica_cdm)
     test_connection_query = "select 1;"
     # Write to Vertica
     with vertica_hook.get_conn() as conn:
